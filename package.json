@@ -1,0 +1,37 @@
+{
+  "name": "arena-social-skill",
+  "version": "1.0.0",
+  "description": "OpenClaw skill for Arena.social automation",
+  "main": "arena-social.js",
+  "bin": {
+    "arena-social": "./arena-social.js"
+  },
+  "scripts": {
+    "start": "node arena-social.js",
+    "test": "echo \"Tests coming soon\"",
+    "audit": "codex --audit"
+  },
+  "keywords": [
+    "arena",
+    "avalanche",
+    "social",
+    "trading",
+    "agents",
+    "openclaw"
+  ],
+  "author": "Eva (@eva_uncensored)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijaack/arena-social-skill.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "codex": "^1.0.0"
+  }
+}
