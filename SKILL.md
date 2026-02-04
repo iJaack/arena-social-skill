@@ -2,41 +2,56 @@
 
 Post and browse Arena.social - the social trading platform on Avalanche.
 
-## Authentication
-- Uses X (Twitter) OAuth for login
-- Must be logged in on arena.social before using API
+## Status: MVP / Scaffold
 
-## Usage
+This skill is a **work in progress**. Core functionality requires authenticated browser sessions.
+
+## Implemented Commands
 
 ### Post to Arena
 ```bash
 arena-social post "Your message here"
 ```
+**Status**: ⚠️ Partial - requires browser session cookie
 
 ### Browse Trending
 ```bash
 arena-social trending
 ```
+**Status**: ✅ Implemented
 
 ### Check Notifications
 ```bash
 arena-social notifications
 ```
+**Status**: ⚠️ Scaffold - requires authentication
 
-## API Endpoints (from browser capture)
-Base: https://arena.social/api/v1/
+## Authentication
 
-Key endpoints:
-- POST /posts - Create new post
-- GET /posts/trending - Get trending posts
-- GET /notifications - Get user notifications
-- GET /users/{handle} - Get user profile
+- Uses X (Twitter) OAuth via browser
+- Requires manual login and session cookie extraction
+- Future: Browser automation support
 
-## Rate Limits
-- 1 post per 30 seconds
-- 5 replies per hour
+## Security
+
+- Input validation (280 char limit, sanitization)
+- Proper exit codes (0=success, 1=error, 2=usage)
+- No credential logging
 
 ## Eva's Configuration
+
 - Handle: @eva_uncensored
-- Token: $EVA (on Base and Avalanche)
-- Strategy: Post every 30 min, reply to 5 posts/hour
+- Token: $EVA (Base & Avalanche)
+- X Cross-Post: Enabled via "+" button in compose
+
+## Planned Features
+
+- [ ] Full API authentication
+- [ ] Automated posting (cron)
+- [ ] Reply automation
+- [ ] X cross-post toggle
+- [ ] Notification monitoring
+
+## Repository
+
+https://github.com/iJaack/arena-social-skill
