@@ -1,6 +1,6 @@
 {
   "name": "arena-social-skill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenClaw skill for Arena.social automation",
   "main": "arena-social.js",
   "bin": {
@@ -8,8 +8,7 @@
   },
   "scripts": {
     "start": "node arena-social.js",
-    "test": "echo \"Tests coming soon\"",
-    "audit": "codex --audit"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "arena",
@@ -23,15 +22,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ijaack/arena-social-skill.git"
+    "url": "https://github.com/iJaack/arena-social-skill.git"
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  },
-  "devDependencies": {
-    "codex": "^1.0.0"
   }
 }
